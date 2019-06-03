@@ -53,8 +53,7 @@ public class BlogPost {
 
 	@Override
 	public String toString() {
-		return "BlogPost [postId=" + postId + ", name=" + name
-						+ ", author=" + author + ", body=" + body + "]";
+		return "BlogPost [postId=" + postId + ", name=" + name + ", author=" + author + ", body=" + body + "]";
 	}
 	
 }
