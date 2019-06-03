@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class BlogPostController {
 
-	@GetMapping(value="/")
+	@GetMapping(value="/blogpost")
 	public String index(BlogPost blogPost) {
 		return "blogpost/index";
 	}
