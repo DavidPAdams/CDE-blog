@@ -10,25 +10,25 @@ public class BlogPost {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long postId;
-	private String name;
+	private String title;
 	private String author;
 	private String body;
 	
 	public BlogPost(){};
 
-	public BlogPost(String name, String author, String body)
+	public BlogPost(String title, String author, String body)
 	{
-		this.name = name;
+		this.title = title;
 		this.author = author;
 		this.body = body;
 	}
 
-	public String getName() {
-		return name;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	public String getAuthor() {
@@ -53,7 +53,7 @@ public class BlogPost {
 
 	@Override
 	public String toString() {
-		return "BlogPost [postId=" + postId + ", name=" + name + ", author=" + author + ", body=" + body + "]";
+		return "BlogPost [postId=" + postId + ", title=" + title + ", author=" + author + ", body=" + body + "]";
 	}
 	
 }
