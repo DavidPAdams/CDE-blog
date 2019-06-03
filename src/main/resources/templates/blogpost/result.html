@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
   <title>Blog Post result</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-	<h1>Blog Post result</h1>
-<!-- 	<br/>
-	<a href='/about'>Be quiet!!</a>
-	<br/>
-	<a href='/console'>DB Console</a> -->
+	<h1>Thank you</h1>
+	<p>Blog post:</p>
+	<p th:text="${title}" />
+	<p th:text="${author}" />
+	<p th:text="${body}" />
 </body>
 </html>
