@@ -21,3 +21,6 @@ public class MiyagiOneController {
 	}
 	
 }
+
+// https://www.baeldung.com/spring-controller-vs-restcontroller
+// for using restful routes
