@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class BlogPostController {
 	
-	private BlogPost blogPost;
+//	private BlogPost blogPost;
 	
 	@Autowired
   private BlogPostRepository blogPostRepository;
@@ -25,7 +25,7 @@ public class BlogPostController {
 		blogPostRepository.save(new BlogPost(blogPost.getTitle(), blogPost.getAuthor(), blogPost.getBody()));
 		model.addAttribute("title", blogPost.getTitle());
 		model.addAttribute("author", blogPost.getAuthor());
-		model.addAttribute("blogEntry", blogPost.getBody());
+		model.addAttribute("body", blogPost.getBody());
 		return "blogpost/result";
 	}
 }
