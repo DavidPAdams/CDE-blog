@@ -2,30 +2,36 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <title>Frog Site</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Type"
+  content="text/html; charset=UTF-8" />
 </head>
 <body>
-	<h1>Welcome to Our Frog Post Site!</h1>
-	<h3>Check out our frogs!</h3>
-	<p>Please use the form below to submit a Frog Post:</p>
-	<form action="#" th:action="@{/blogpost}" th:object="${blogPost}" method="post">
-		<table>
-			<tr>
-				<td>Title</td>
-				<td><input type="text" th:field="*{title}" placeholder="Title"/></td>
-			</tr>
-			<tr>
-				<td>Author:</td>
-				<td><input type="text" th:field="*{author}" placeholder="Author"/></td>
-			</tr>
-			<tr>
-				<td>Blog Entry:</td>
-				<td><input type="text" th:field="*{body}" placeholder="Say it..."/></td>
-			</tr>
-			<tr>
-				<td><button type="submit">Submit Your Post</button></td>
-			</tr>
-		</table>
-	</form>
+  <h1>Welcome to Our Frog Post Site!</h1>
+  <h3>Check out our frogs!</h3>
+  <p>Please use the form below to submit a Frog Post:</p>
+  <form action="#" th:action="@{/blogpost}"
+    th:object="${blogPost}" method="post">
+    <table>
+      <tr>
+        <td>Title</td>
+        <td><input type="text" th:field="*{title}"
+          placeholder="Title" /></td>
+      </tr>
+      <tr>
+        <td>Author:</td>
+        <td><input type="text" th:field="*{author}"
+          placeholder="Author" /></td>
+      </tr>
+      <tr>
+        <td>Blog Entry:</td>
+        <td><input type="text" th:field="*{body}"
+          placeholder="Say it..." /></td>
+      </tr>
+      <tr>
+        <td><button type="submit">Submit Your
+            Post</button></td>
+      </tr>
+    </table>
+  </form>
 </body>
 </html>
