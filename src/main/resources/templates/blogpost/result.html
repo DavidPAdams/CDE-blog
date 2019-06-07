@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <title>Blog Post result</title>
+  <title>Frog Post result</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link href="../../webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">  
+  <link rel="stylesheet" type="text/css" href="css/pagesStyle.css">  
 </head>
 <body>
-  <h1>Thank you</h1>
-  <p>Blog post:</p>
-  <p th:text="${title}" />
-  <p th:text="${author}" />
-  <p th:text="${body}" />
+  <div class="container">
+    <h1>Frank you</h1>
+    <p>Frog post:</p>
+    <p th:text="${title}" />
+    <p th:text="${author}" />
+    <p th:text="${body}" />
+    <p th:text="${foo}" />
+    <a th:href='@{/blogpost}'><button class="btn btn-primary">Go back</button></a>
+    <a th:href="@{/blogpost/new}"><button class= "btn btn-info">Submit a Blue Frog</button></a>
+  </div>
+  <script src="webjars/jquery/1.9.1/jquery.min.js"></script>  
+  <script src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
 </body>
 </html>
