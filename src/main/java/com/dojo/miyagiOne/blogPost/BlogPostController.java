@@ -1,6 +1,9 @@
 package com.dojo.miyagiOne.blogPost;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -26,6 +29,8 @@ public class BlogPostController {
 
 	@GetMapping(value = "/blogpost")
 	public String index(BlogPost blogPost, Model model) {
+	  DateFormat dateFormat = new SimpleDateFormat("yyyy-Mmm-dd HHmm");
+	  model.addAttribute("serverTime", dateFormat.format(new Date()));
 	  model.addAttribute("posts", posts);
 	  return "blogpost/windex";
 	}
@@ -34,6 +39,7 @@ public class BlogPostController {
 	public String create(BlogPost blogPost, Model model) {
 	  blogPostRepository.save(blogPost);
 	  posts.add(blogPost);
+	  model.addAttribute("postId", blogPost.getPostId());
 	  model.addAttribute("title", blogPost.getTitle());
 	  model.addAttribute("author", blogPost.getAuthor());
 	  model.addAttribute("body", blogPost.getBody());
