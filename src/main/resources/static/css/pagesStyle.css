@@ -1,0 +1,52 @@
+body {
+  color: white;
+  background-color: darkgray;
+  font-family: Arial;
+}
+
+nav a {
+  padding: 15px;
+  border:solid;
+  border-radius: 25px;
+  color:green;
+  transition:.5s;
+}
+
+nav a:hover{
+  color: yellow;
+  background-color: brown;
+  font-size:xx-large;
+}
+
+nav{
+  position:static;
+  width: 100%;
+  text-align: center;
+  padding-top: 30px;
+}
+
+#homePage{
+  top: 60px;
+}
+
+@media only screen 
+  and (max-width: 768px)
+  and (min-width: 320px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  nav{
+    top: initial;
+    bottom: 30px;
+  }
+  nav a{
+    font-size: 1em;
+    padding:10px;
+  }
+  body {
+    background-color: lightblue;
+    color: brown;
+  }
+}
+
+.blogBody {
+  color: brown;
+}
