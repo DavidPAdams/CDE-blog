@@ -12,7 +12,7 @@
 <body>
   <div class="container">
     <h1>Welcome to Our Frog Post Site!</h1>
-    <a href="/blogpost/new"><button class="btn btn-warning">Create a new frog</button></a>
+    <a th:href="@{/blogpost/new}"><button class="btn btn-warning">Create a new frog</button></a>
     <h3>Check out our frogs!</h3>
     <div class="row">
       <div th:each="post:${posts}">
