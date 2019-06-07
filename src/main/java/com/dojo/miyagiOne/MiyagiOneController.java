@@ -19,4 +19,9 @@ public class MiyagiOneController {
 		return "pages/about";
 	}
 	
+  @GetMapping(value="/contact")
+  public String contact()
+  {
+    return "pages/contact";
+  }	
 }
