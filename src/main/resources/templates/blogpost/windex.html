@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Frog Site</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link href="../../webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/pagesStyle.css">  
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Our Frog Post Site!</h1>
+    <a href="/blogpost/new"><button class="btn btn-warning">Create a new frog</button></a>
+    <h3>Check out our frogs!</h3>
+    <div class="row">
+      <div th:each="post:${posts}">
+        <div class="col-md-8">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <p th:text="${post.postId}" />
+              <p th:text="${post.title}" />
+            </div>
+            <div class="panel-body blogBody">
+              <p th:text="${post.author}" />
+              <p th:text="${post.body}" />
+            </div>
+            <div class="panel-footer">
+              <!-- Link to Update -->
+              <!-- Link to Show  -->
+              <form action="#" th:action="@{'/blogpost/{id}'(id=${post.postId})}" th:method="delete" class="form-horizontal">
+                <div class="form-group">
+                  <input type="hidden" name="_method" value="delete"/>
+                  <button type="submit" class="btn btn-danger" th:text="Delete">Delete</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+    <a href='/'>Go home</a>
+  </div>  
+  <script src="../../webjars/jquery/1.9.1/jquery.min.js"></script>  
+  <script src="../../webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+</body>
+</html>
+
+
