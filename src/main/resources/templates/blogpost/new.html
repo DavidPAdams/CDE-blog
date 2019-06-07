@@ -2,45 +2,42 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <title>Frog Site</title>
-<meta http-equiv="Content-Type"
-  content="text/html; charset=UTF-8" />
-  <link href="../../webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">  
-  <link rel="stylesheet" type="text/css" href="css/pagesStyle.css">  
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <div th:replace="fragments/styleLinks :: styleLinks" ></div>
 </head>
 <body>
-<div class="container">
-  <h1>Add a new Frog, RIBBIT!</h1>
-
-  <p>Please use the form below to submit a Frog Post:</p>
-  <form action="#" th:action="@{/blogpost}"
-    th:object="${blogPost}" method="post">
-    <table>
-      <tr>
-        <td>Title:</td>
-        <td><input class="form-control" type="text" th:field="*{title}"
-          placeholder="Title" /></td>
-      </tr>
-      <tr>
-        <td>Author:</td>
-        <td><input class="form-control" type="text" th:field="*{author}"
-          placeholder="Author" /></td>
-      </tr>
-      <tr>
-        <td>Grog Entry:</td>
-        <td><input class="form-control" type="text" th:field="*{body}"
-          placeholder="Say it..." /></td>
-      </tr>
-      <tr>
-        <td><br /><button class="btn btn-primary" type="submit">Submit Your
-            Toast</button></td>
-      </tr>
-    </table>
-  </form>
-  <br/>
-  <a href='/'><button class="btn btn-warning">Go home</button></a>
-  </div>
-  <script src="../../webjars/jquery/1.9.1/jquery.min.js"></script>  
-  <script src="../../webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+  <div th:replace="fragments/navbar :: navbar" ></div>
+  <div class="container">
+    <h1>Add a new Frog, RIBBIT!</h1>
+    <p>Please use the form below to submit a Frog Post:</p>
+    <form action="#" th:action="@{/blogpost}"
+      th:object="${blogPost}" method="post">
+      <table>
+        <tr>
+          <td>Title:</td>
+          <td><input class="form-control" type="text" th:field="*{title}"
+            placeholder="Title" /></td>
+        </tr>
+        <tr>
+          <td>Author:</td>
+          <td><input class="form-control" type="text" th:field="*{author}"
+            placeholder="Author" /></td>
+        </tr>
+        <tr>
+          <td>Grog Entry:</td>
+          <td><input class="form-control" type="text" th:field="*{body}"
+            placeholder="Say it..." /></td>
+        </tr>
+        <tr>
+          <td><br /><button class="btn btn-primary" type="submit">Submit Your
+              Toast</button></td>
+        </tr>
+      </table>
+    </form>
+    <br/>
+    <a href='/'><button class="btn btn-warning">Go home</button></a>
+    </div>
+    <div th:replace="fragments/scriptLinks :: scriptLinks" ></div>
 </body>
 </html>
 

@@ -2,9 +2,13 @@
 <html>
 <head>
   <title>Home Page</title>
-  <link rel="stylesheet" type="text/css" href="css/pagesStyle.css">  
+  <div th:replace="fragments/styleLinks :: styleLinks" ></div>
 </head>
 <body>
-  <h1>About</h1><br/><a href='/'>This is me</a>
+  <div th:replace="fragments/navbar :: navbar"></div>
+  <div class="container">  
+    <h1>About</h1><br/><a href='/'>This is me</a>
+  </div>
 </body>
+  <div th:replace="fragments/scriptLinks :: scriptLinks" ></div>
 </html>

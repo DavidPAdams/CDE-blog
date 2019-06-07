@@ -3,55 +3,29 @@
 <head>
   <title>Frog Post result</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <link href="../../webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">  
-  <link rel="stylesheet" type="text/css" href="css/pagesStyle.css">  
+  <div th:replace="fragments/styleLinks :: styleLinks" ></div>
 </head>
 <body>
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h1 th:text="${title} ">Ribbit</h1>
-        </div>
-        <div class="panel-body blogBody">
-          <strong><p th:text="${author}"/></strong>
-          <p th:text="${body}" />
-        </div>
-        <div class="panel-footer">
-          <!-- Link to Update -->
-          <!-- Link to Show  -->
-          <!--  Link to Destroy -->
-    <a th:href='@{/blogpost}'><button class="btn btn-primary">Go back</button></a>
-    <a th:href="@{/blogpost/new}"><button class= "btn btn-info">Blue Frog</button></a>
+  <div th:replace="fragments/navbar :: navbar" ></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h1 th:text="${title} ">Ribbit</h1>
+          </div>
+          <div class="panel-body blogBody">
+            <strong th:text="${author}"></strong>
+            <p th:text="${body}" />
+          </div>
+          <div class="panel-footer">
+            <a th:href='@{/blogpost}'><button class="btn btn-primary">Go back</button></a>
+            <a th:href="@{/blogpost/new}"><button class= "btn btn-info">Blue Frog</button></a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>  <script src="../../webjars/jquery/1.9.1/jquery.min.js"></script>  
-  <script src="../../webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+  <div th:replace="fragments/scriptLinks :: scriptLinks" ></div>
 </body>
 </html>
-
-<!-- <div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h1 th:text="${title} ">Ribbit</h1>
-        </div>
-        <div class="panel-body">
-          <strong><p th:text="${author}"/></strong>
-          <p th:text="${body}" />
-        </div>
-        <div class="panel-footer">
-          Link to Update
-          Link to Show 
-           Link to Destroy
-    <a th:href='@{/blogpost}'><button class="btn btn-primary">Go back</button></a>
-    <a th:href="@{/blogpost/new}"><button class= "btn btn-info">Blue Frog</button></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->

@@ -4,10 +4,7 @@
 <title>Frog Site</title>
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link
-  href="../../webjars/bootstrap/3.3.7/css/bootstrap.min.css"
-  rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="css/pagesStyle.css">  
+  <div th:replace="fragments/styleLinks :: styleLinks" ></div>
 </head>
 <body>
   <div th:replace="fragments/navbar :: navbar" ></div>
@@ -46,8 +43,7 @@
     <br/>
     <a href='/'>Go home</a>
   </div>  
-  <script src="../../webjars/jquery/1.9.1/jquery.min.js"></script>  
-  <script src="../../webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+  <div th:replace="fragments/scriptLinks :: scriptLinks" ></div>
 </body>
 </html>
 
