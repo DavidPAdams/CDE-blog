@@ -47,15 +47,11 @@ public class BlogPostController {
 	}
 	
 	public void delete(long id) {
-	  int postIndex = -1;
 	  for(BlogPost post : posts) {
 	    if(post.getPostId() == id) {
-	      postIndex = posts.indexOf(post);
-	      continue;
+	      posts.remove(posts.indexOf(post));
+	      break;
 	    }
-	  }
-	  if(postIndex > -1) {
-	    posts.remove(postIndex);
 	  }
 	}
 	
