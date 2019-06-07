@@ -27,12 +27,14 @@
             <div class="panel-footer">
               <!-- Link to Update -->
               <!-- Link to Show  -->
-              <form action="#" th:action="@{'/blogpost/{id}'(id=${post.postId})}" th:method="delete" class="form-horizontal">
-                <div class="form-group">
-                  <input type="hidden" name="_method" value="delete"/>
-                  <button type="submit" class="btn btn-danger" th:text="Delete">Delete</button>
-                </div>
-              </form>
+              <div class="container">
+                <form action="#" th:action="@{'/blogpost/{id}'(id=${post.postId})}" th:method="delete" class="form-horizontal">
+                  <div class="form-group">
+                    <input type="hidden" name="_method" value="delete"/>
+                    <button type="submit" class="btn btn-danger" th:text="Delete">Delete</button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
