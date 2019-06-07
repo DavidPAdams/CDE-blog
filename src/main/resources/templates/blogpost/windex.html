@@ -10,6 +10,7 @@
 <link rel="stylesheet" type="text/css" href="css/pagesStyle.css">  
 </head>
 <body>
+  <div th:replace="fragments/navbar :: navbar" ></div>
   <div class="container">
     <h1>Welcome to Our Frog Post Site!</h1>
     <a th:href="@{/blogpost/new}"><button class="btn btn-warning">Create a new frog</button></a>
